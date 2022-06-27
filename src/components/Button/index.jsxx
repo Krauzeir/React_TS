@@ -1,0 +1,45 @@
+import React from 'react';
+import style from './Button.module.scss';
+
+
+
+class Botao extends React.Component <{type?: "button" | "submit" | "reset" | undefined,
+onClick?: () => void}>{
+    
+    render() {
+        const { type = "button" } = this.props
+        return (
+            <button type={type} className={style.botao}>
+                {this.props.children}
+            </button>
+        ) 
+    }
+}
+
+export default Botao;
+
+
+
+Problema relacionado ao Children, retire o ultimo "x" do nome do arquivo
+Resolvendo em tsx(typescript) entre *
+
+type?: o "?" não deixa ser obrigatorio
+
+
+ DELETADO
+
+class Botao extends React.Component <{children: any, type?: "button" | "submit" | "reset" | undefined,
+onClick?: () => void}>{
+    
+    render() {
+        const { type = "button" } = this.props
+        return (
+            <button type={type} className={style.botao}>
+                {this.props.children}
+            </button>
+        ) 
+    }
+}
+
+export default Botao;
+
